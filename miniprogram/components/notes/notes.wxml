@@ -1,0 +1,12 @@
+<import src="../../pages/templete/note.wxml" />
+<view class="left">
+    <view>123</view>
+    <block wx:for="{{this.data.noteList}}" wx:key="index" wx:for-item="item_note">
+        <template is="msg" data="{{item_note}}" wx:if="{{index%2==0}}"></template>
+    </block>
+</view>
+<view class="right">
+    <block wx:for="{{this.data.noteList}}" wx:key="index" wx:for-item="item_note">
+        <template is="msg" data="{{item_note}}" wx:if="{{index%2==1}}"></template>
+    </block>
+</view>

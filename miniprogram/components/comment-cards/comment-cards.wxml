@@ -1,0 +1,27 @@
+<view class="comment_blocks">
+  <view class="profile_blocks"> 
+    <image class="profiles" src="{{reply_details.comment_user_profile}}"/>
+  </view>
+  <view>
+    <view class="name_authors">
+    <view class="names">{{reply_details.comment_user_name}}</view>
+    <view wx:if="{{reply_details._openid==note_open_id}}">
+      <view class="authors">作者</view>
+    </view>
+  </view>
+    <view class="comments" bindtap="call_comment">
+      <text wx:if="{{reply_details.reply_name!=''}}" class="reply_author">
+        <text>回复</text>
+        <text class="reply_name_style">{{reply_details.reply_name}}:</text>
+      </text>
+      {{reply_details.comment_text}}
+    </view>
+    <text class="comment_time">{{reply_details.comment_time}}</text>
+  </view>
+</view>
+<view wx:if="{{input_if!=false}}">
+      <input type="text" bindconfirm="play_reply" focus="true" bindblur="set_input_if" 
+      value="{{content_reply}}" 
+      placeholder="回复"
+        confirm-type="send" />
+    </view>

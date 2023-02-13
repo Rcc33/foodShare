@@ -1,0 +1,108 @@
+/* pages/me/me.wxss */
+@import "../templete/note.wxss";
+
+.head-pic {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #DDDDDD;
+  border-radius: 50px;
+}
+
+.avatar {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+  width: 100%;
+  height: 70rpx;
+}
+
+.button_first,
+.button_second {
+  font-size: 17px;
+  font-family: 'PingFang SC-Medium';
+  margin-right: 90rpx;
+  margin-left: 90rpx
+}
+
+.divLine {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rpx;
+  background: #f48787;
+  width: 100%;
+  height: 7rpx;
+}
+
+.avatarBtn {
+  width: 130rpx !important;
+  height: 135rpx;
+  padding: 0px;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.avatarBtn::after {
+  border: 0;
+}
+
+.firstview {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.mptabs {
+  margin-left: 73px;
+
+}
+
+
+.tabbar {
+  height: 400px;
+}
+
+.scrollview {
+  height: 550px;
+
+}
+
+.warning1{
+  color:gray; 
+  justify-content: center;
+  margin-left: 85px;
+  width:100%;
+  margin-top:80px;
+}
+
+.notes {
+  display: flex;
+  justify-content: center;
+  clear: both;
+  overflow: hidden;
+  width: 97%;
+  margin-top: 5rpx;
+  margin-left: 1%;
+  padding-top: 20rpx;
+  border-top: 1px;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+.weui-tabs-swiper {
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 1rpx solid #DDDDDD;
+}
+
+.view1 {
+  margin-top: 8px;
+}

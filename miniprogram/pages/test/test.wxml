@@ -1,0 +1,4 @@
+<view bindtap="click">点</view>
+<view wx:for="{{list_c}}" wx:key="index">
+  今天
+</view>

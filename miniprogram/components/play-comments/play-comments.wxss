@@ -1,0 +1,43 @@
+
+.card_comment_block{
+  display: flex;
+  flex-direction: row;
+  margin:20px;
+}
+.card_profile_block{
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.card_profiles{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.card_line{
+  border-top: 1px #eeeaea solid;
+  width: 100%;
+}
+.card_name_author{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.card_name{
+  color: darkgray;
+  margin-left: 15px;
+}
+.card_author{
+  width: 45px;
+  height: 20px;
+  color: rgb(78, 80, 80);
+  font-size: smaller;
+  text-align: center;
+  background-color: rgba(219, 217, 217, 0.295);
+  margin-left: 10px;
+  border-radius: 35rpx;
+}
+.card_comment_time{
+  color: rgb(78, 80, 80);
+  font-size: smaller;
+}

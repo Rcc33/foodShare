@@ -1,0 +1,63 @@
+<view>
+<view class="picture1">
+    <scroll-view   scroll-x="true" class="out3" enable-flex="true">
+        <view class="B">
+            <view class="A">
+                    <view wx:if="{{mypic==0}}">
+                        <view wx:for="{{images}}"  wx:key="key" class="out" > 
+                            <image src="{{item}}"  class="share1" enable-flex="true"  bindtap="previewpic" bindlongpress="delpicaddtip" mode="aspectFill"></image>
+                        </view>
+                    </view>
+            </view>
+            <view>
+                <image src="cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/icon_plus.png"  bindtap="openalbum"  class="share1" mode="aspectFill" ></image>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+
+
+
+<view class="titleline">
+    <input class="input1" maxlength="20" bindinput="biaoti"  value="{{title}}"
+        placeholder="填写标题会让更多人搜到你的分享(标题限制20字)" placeholder-class="myholder1" selection-start="100"></input>
+</view>
+
+
+<scroll-view class="scrolltext" scroll-y>
+    <textarea  maxlength="1000" class="input2" bindinput="zhengwen" value="{{content}}" placeholder="添加精美文案留下你的美食体验吧(正文限制1000字)"
+        placeholder-class="myholder2"></textarea>
+</scroll-view>
+
+
+<view class="stars1">
+    <view class="startext">美食体验感评星</view>
+    <view class="starpic">
+        <block wx:for="{{one_2}}" wx:key="index">
+            <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2'
+                src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/yellow.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+            <image class="star" catchtap='in_xin' id='{{index+1}}' data-in='use_sc'
+                src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/star_gray.png'>
+            </image>
+        </block>
+    </view>
+</view>
+
+<view class="locate">
+    <view class="locatetext">添加地点</view>
+    <image src="cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/locate.png"
+        bindtap="addLocation" class="locatepic" mode="aspectFill"></image>
+    <view class="citytext">{{city}}</view>
+</view>
+
+
+<view class="button">
+    <view class="btn1">
+        <button  style="width:20vw;height:9vw" class="button1" size="mini" id="fanhui" bindtap="fanhuiupload">返回</button></view>
+    <view class="btn2">
+        <button style="width:70vw" class="button2"  size="default" id="fabu" bindtap="uploaddata">发布</button>
+    </view>
+</view>
+</view>

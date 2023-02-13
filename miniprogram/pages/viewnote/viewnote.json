@@ -1,0 +1,6 @@
+{
+  "conponent": "true",
+  "usingComponents": {
+    "play-comments":"/components/play-comments/play-comments"
+  }
+}

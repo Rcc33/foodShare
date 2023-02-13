@@ -1,0 +1,26 @@
+<view class="card_comment_block">
+  <view class="card_profile_block">
+    <image class="card_profiles" src="{{comment_details.comment_user_profile}}" />
+  </view>
+  <view class="card_line">
+    <view bindtap="call_comment">
+    <view class="card_name_author">
+      <view class="card_name">{{comment_details.comment_user_name}}</view>
+      <view wx:if="{{comment_details._openid==note_open_id}}">
+      <view class="card_author">作者</view>
+      </view>
+    </view>
+    <view class="card_comment" bindtap="call_comment">{{comment_details.comment_text}}</view>
+    <text class="card_comment_time" >{{comment_details.comment_time}}</text>
+  </view>
+    <view wx:if="{{input_if!=false}}">
+      <input type="text" bindconfirm="gain_content_reply" focus="true" bindblur="set_input_if" 
+      value="{{content_reply}}" 
+      placeholder="回复"
+        confirm-type="send" />
+    </view>
+    <view wx:for="{{comment_list_reply}}" wx:key="index"  wx:for-item="item">
+      <comment-cards bind:updataSelect="get_refurbish_reply" reply_details="{{item}}" note_open_id="{{note_open_id}}"></comment-cards>
+    </view>
+  </view>
+</view>

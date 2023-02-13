@@ -1,0 +1,114 @@
+@import "../templete/note.wxss";
+
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 2525554 */
+    src: url('//at.alicdn.com/t/font_2525554_c9e4z0ixhm4.woff2?t=1620047771974') format('woff2'),
+        url('//at.alicdn.com/t/font_2525554_c9e4z0ixhm4.woff?t=1620047771974') format('woff'),
+        url('//at.alicdn.com/t/font_2525554_c9e4z0ixhm4.ttf?t=1620047771974') format('truetype');
+}
+
+.father {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.father_small {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.top_lead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rpx;
+    width: 95%;
+    height: 70rpx;
+    margin-left: 2%;
+}
+
+.locate {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    margin-right: 10rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.locate_icon {
+    height: 20px;
+    width: 20px;
+}
+
+.locate_text {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    margin-left: 12rpx;
+}
+
+.text {
+    width: 150rpx;
+    display: -webkit-box;
+    font-size: 28rpx;
+    color: rgb(20, 20, 20);
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-family: 'PingFang SC-Medium';
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+}
+
+.search {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 18rpx;
+    border: 1rpx solid #f48787
+}
+
+.search_icon {
+    margin-left: 15rpx;
+}
+
+.search_input {
+    margin-left: 15rpx;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.notes {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    overflow: hidden;
+    width: 97%;
+    margin-top: 5rpx;
+    margin-left: 1%;
+    padding-top: 20rpx;
+    border-top: 1px;
+}

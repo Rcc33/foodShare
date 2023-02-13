@@ -1,0 +1,8 @@
+{
+  "conponent": "true",
+  "usingComponents": {
+    "notes": "../../components/notes/notes"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

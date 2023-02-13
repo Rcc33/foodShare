@@ -1,0 +1,33 @@
+<import src="../templete/note.wxml" />
+<view class="{{noteList.length > 2?father:father_small}}">
+    <view class="top_lead">
+        <view class="locate" bindtap="showcityPicker">
+            <image class="locate_icon"
+                src="cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/locates.png"
+                mode="aspectFill"></image>
+            <view class="locate_text">
+                <text class="text">{{city}}</text>
+            </view>
+        </view>
+        <view class="search" bindtap="handleInput">
+            <view class="search_bar">
+                <icon class="search_icon" type="search" size="14"></icon>
+                <input type="text" class="search_input" placeholder="请输入搜索内容" confirm-type="search" />
+            </view>
+        </view>
+    </view>
+    <view class="notes">
+        <view class="left">
+            <block wx:for="{{noteList}}" wx:key="index" wx:for-item="item_note">
+                <template is="msg"
+                    data="{{item_note:item_note, goodList:goodList, length:goodList.length,collectionList:collectionList,c_length:collectionList.length}}"
+                    wx:if="{{index%2==0}}"></template>
+            </block>
+        </view>
+        <view class="right">
+            <block wx:for="{{noteList}}" wx:key="index" wx:for-item="item_note">
+                <template is="msg" data="{{item_note:item_note, goodList:goodList, length:goodList.length,collectionList:collectionList,c_length:collectionList.length}}" wx:if="{{index%2==1}}"></template>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,77 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/sharepages/sharepage",
+          "pathName": "pages/sharepages/sharepage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/view/view",
+          "pathName": "pages/view/view",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/testLogin/testLogin",
+          "pathName": "pages/testLogin/testLogin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/university-picker",
+          "pathName": "pages/university-picker",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/universityPicker/universityPicker",
+          "pathName": "pages/universityPicker/universityPicker",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

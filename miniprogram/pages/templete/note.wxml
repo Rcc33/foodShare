@@ -1,0 +1,52 @@
+<wxs module="tools" src="../function.wxs" />
+<template name="msg">
+    <view class="item">
+        <image class="pic" data-id="{{item_note._id}}" data-length="{{length}}" data-c_length="{{c_length}}"
+            bindtap="checkNote" bindlongpress="deleteNote" src="{{item_note.picture[0]}}" mode="widthFix"></image>
+        <view data-id="{{item_note._id}}" data-length="{{length}}" data-c_length="{{c_length}}" bindtap="checkNote" bindlongpress="deleteNote"
+            class="title-wrap">
+            <navigator url="url" class="title">{{item_note.title}}</navigator>
+        </view>
+        <view class="level" data-id="{{item_note._id}}" data-length="{{length}}" data-c_length="{{c_length}}" bindtap="checkNote" bindlongpress="deleteNote">
+            <view class='stars' wx:for="{{item_note.level}}" wx:key="index">
+                <image id="star"
+                    src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/yellow.png'>
+                </image>
+            </view>
+            <view class='stars' wx:for="{{5-item_note.level}}" wx:key="index">
+                <image id="star"
+                    src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/star_gray.png'>
+                </image>
+            </view>
+        </view>
+        <view class="bottom">
+            <view data-id="{{item_note._id}}" data-length="{{length}}" data-c_length="{{c_length}}" bindtap="checkNote" bindlongpress="deleteNote"
+                class="face-name">
+                <image class="face" src="{{item_note.avatar}}"></image>
+                <text class="name">{{item_note.nickName}}</text>
+            </view>
+            <view class="interact">
+                <view class="good">
+                    <image class="good_icon" wx:if="{{tools.checkGood(goodList,length,item_note._id) == '0'}}"
+                        bindtap='goodUp' bindlongpress="deleteNote" data-noteid='{{item_note._id}}'
+                        src="cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/不要生气.png"></image>
+                    <image class='goods_icon' wx:if="{{tools.checkGood(goodList,length,item_note._id) == '1'}}"
+                        bindtap='goodDown' bindlongpress="deleteNote" data-noteid='{{item_note._id}}'
+                        src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/goods.png'></image>
+                </view>
+                <view class="collection">
+                    <image class="collection_icon"
+                        wx:if="{{tools.checkCollection(collectionList,c_length,item_note._id) == '0'}}"
+                        bindtap='collectionUp' bindlongpress="deleteNote" data-noteid='{{item_note._id}}'
+                        src="cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/shoucang.png">
+                    </image>
+                    <image class='collections_icon'
+                        wx:if="{{tools.checkCollection(collectionList,c_length,item_note._id) == '1'}}"
+                        bindtap='collectionDown' bindlongpress="deleteNote" data-noteid='{{item_note._id}}'
+                        src='cloud://cloud1-3g2crjv629049c8c.636c-cloud1-3g2crjv629049c8c-1305648382/yellow.png'>
+                    </image>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

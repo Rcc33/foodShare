@@ -1,0 +1,42 @@
+<import src="../templete/note.wxml" />
+<view class="firstview">
+  <view class="avatar">
+    <button class="avatarBtn" style="width:unset">
+      <image mode='scaleToFill' class="head-pic" src="{{avatar}}" bindtap="login"></image>
+    </button>
+  </view>
+  <view class="nickname" bindtap="login">{{nickName}}</view>
+</view>
+
+<view class="top">
+  <view class="button_first" bindtap="onchange1">
+    <view>我的发布 ({{datalist.length}})</view>
+    <view class="divLine" wx:if="{{check_button==0}}"></view>
+  </view>
+  <view class="button_second" bindtap="onchange2">
+    <view>我的收藏 ({{alist.length}})</view>
+    <view class="divLine" wx:if="{{check_button==1}}"></view>
+  </view>
+</view>
+
+<view class="warning1" wx:if="{{tar}}">请登录查看已发布已收藏内容~</view>
+<view class="warning1" wx:if="{{temp==1}}">您还没有发布任何笔记~</view>
+<view class="warning1" wx:if="{{temp1==1}}">您还没有收藏任何笔记~</view>
+
+
+<view class="notes">
+  <view class="left">
+    <block wx:for="{{list}}" wx:key="index" wx:for-item="item_note">
+      <template is="msg"
+        data="{{item_note:item_note,goodList:goodList,length:goodList.length,collectionList:alist,c_length:alist.length}}"
+        wx:if="{{index%2==0}}"></template>
+    </block>
+  </view>
+  <view class="right">
+    <block wx:for="{{list}}" wx:key="index" wx:for-item="item_note">
+      <template is="msg"
+        data="{{item_note:item_note,goodList:goodList,length:goodList.length,collectionList:alist,c_length:alist.length}}"
+        wx:if="{{index%2==1}}"></template>
+    </block>
+  </view>
+</view>
